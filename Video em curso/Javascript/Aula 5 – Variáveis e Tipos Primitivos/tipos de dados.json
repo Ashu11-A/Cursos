@@ -1,0 +1,16 @@
+{
+    "number": [
+        5,
+        -12,
+        3.14
+    ],
+    "string": [
+        "Google",
+        "JavaScript",
+        "Maria"
+    ],
+    "boolean": [
+        true,
+        false
+    ]
+}
