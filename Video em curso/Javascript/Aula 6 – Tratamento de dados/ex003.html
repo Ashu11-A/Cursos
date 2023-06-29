@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu primeiro programa...</title>
+  <style>
+    body {
+      background-color: rgb(99, 99, 201);
+      color: white;
+      /* Cor das letras */
+      font: normal 20pt;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    h1 {
+      color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Olá, Mundo!</h1> <!-- EN - Hello, World! -->
+  <p>Yeye, estou fazendo curso.</p>
+  <script>
+    var n1 = window.prompt('Digite um numero')
+    var n2 = window.prompt('Digite outro numero')
+
+    // string + string para concatenação
+    var s1 = n1 + n2 // concatenação
+
+    // number + number para adição
+    var s2 = Number.parseInt(n1) + Number.parseInt(n2) // adição
+    var s3 = Number.parseFloat(n1) + Number.parseFloat(n2) // adição
+    var s4 = Number(n1) + Number(n2) // adição
+    var s5 = s4.toString() + String(s4) // concatenação
+
+    window.alert('Soma dos numeros:' +
+    `\n(concatenação): ${s1}` +
+    `\n(parseInt): ${s2}` +
+    `\n(parseFloat): ${s3}` +
+    `\n(Number): ${s4}` +
+    `\n(toString / String): ${s5}`) // concatenação
+  </script>
+</body>
+
+</html>
