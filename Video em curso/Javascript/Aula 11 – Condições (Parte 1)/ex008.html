@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multado ou não?</title>
+  <style>
+    input#txtvel {
+      width: 100px;
+    }
+    div#res {
+        margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Sistema de Multas</h1>
+  Velocidade do carro <input type="number" name="txtvel" id="txtvel"> Km/h
+  <input type="button" value="Verificar" onclick="cal()">
+    <div id="res">Resultado</div>
+  <script>
+    function cal() {
+      var velocidade = Number(window.document.querySelector('input#txtvel').value)
+      var res = window.document.querySelector('div#res')
+      res.innerHTML = `<p>Sua Velocidade é de <strong>${velocidade}Km/h</strong></p>`
+      if (velocidade > 60) {
+        res.innerHTML += '<p>Está acima da Velocidade, você foi multado por exesso de velocidade (<strong>Multado!</strong>)</p>'
+      } else {
+        res.innerHTML += 'Velocidade Permitida'
+      }
+      res.innerHTML += '<p>Dirija sempre com o sinto de segurança!</p>'
+    }
+  </script>
+</body>
+
+</html>

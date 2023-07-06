@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background-color: rgb(1, 175, 175);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" -->
+        Interaja...
+    </div>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events">Todos os Eventos DOM</a>
+
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+        function clicar() {
+            // Só vai ser execudado quando eu clicar na div#area
+            //window.alert('Alguem clicou')
+            area.innerText = 'Clicou!' // na area do div#area
+            area.style.background = 'limegreen'
+        }
+        function entrar() {
+            area.innerText = 'Entrou' // na area do div#area
+            area.style.background = 'rgb(91, 1, 175)'
+        }
+        function sair() {
+            area.innerText = 'Saiu' // do div#area
+            area.style.background = 'red'
+            setTimeout(() => {
+                area.innerText = 'Interaja...'
+                area.style.background = 'rgb(1, 175, 175)'
+            }, 500)
+        }
+    </script>
+</body>
+</html>
