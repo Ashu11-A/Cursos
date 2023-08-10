@@ -1,0 +1,1 @@
+export{ soma as sum } from './match'
